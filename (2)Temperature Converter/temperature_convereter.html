@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Temperature Converter</title>
+   
+    <style>
+        body{
+            padding: 50px 100px;
+        }
+        h1{
+            text-align: center;
+        }
+        #box{
+            text-align: center;
+            background-color: aquamarine;
+            padding: 50px;
+        }
+        .input{
+            display: inline-block;
+        }
+        .in{
+            padding: 5px 10px;
+            margin: 10px;
+            font-size: 30px;
+            font-weight: bold;
+            width: 250px;
+            text-align: center;
+        }
+        label{
+            font-size: 23px;
+
+        }
+    </style>
+</head>
+<body>
+   <h1>Temperature Converter</h1>
+   <div id="box">
+    <div class="input">
+        <label>Celsius</label><br>
+    <input type="number" value="0" id="cel" class="in">
+    </div>
+
+    <div class="input">
+        <label>Fahrenheit</label><br>
+    <input type="number" value="32" id="far" class="in">
+    </div>
+   </div> 
+<script>
+    let temp1=document.getElementById("cel");
+let temp2=document.getElementById("far");
+
+//for converting celsius into fahrenheit means when input will be given in celsius then fahrenheit will automatically change
+temp1.addEventListener('input',function(){
+     let c=this.value;
+     let f=(c * 9/5) + 32;
+    //If your fahrenheit is not integer then it must be a decimal number then stop its decimal upto four places using this toFixed function which takes argument as integer upto which you want decimal
+     if(!Number.isInteger(f)){
+        f=f.toFixed(4);
+     }
+     temp2.value= f;
+})
+
+//for converting fahrenheit into celsius means when input will be given in fahrenheit then celsius will automatically change
+temp2.addEventListener('input',function(){
+    let f=this.value;
+    let c=(f - 32) * 5/9;
+    //If your celsius is not integer then it must be a decimal number then stop its decimal upto four places using this toFixed function which takes argument as integer upto which you want decimal
+    if(!Number.isInteger(c)){
+        c=c.toFixed(4);
+    }
+    temp1.value=c;
+})
+</script>
+   
+</body>
+</html>
