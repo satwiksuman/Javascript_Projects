@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Background Changer</title>
+     <style>
+        body{
+            margin: 0px;
+            padding: 20px 100px;
+            
+        }
+        h1{
+            text-align: center;
+        }
+        img{
+            width:100%;
+            height: auto;
+            margin: 0 auto;
+        }
+        p{
+            font-size: 20px;
+            text-align: justify;
+        }
+        .btn{
+            width: 20px;
+            height: 20px;
+            display: inline-block;
+            border: 1px solid black;
+            border-radius: 50%;
+            cursor: pointer;
+        }
+        #white{
+          background-color: white;
+        }
+        #green{
+         background-color: greenyellow;
+        }
+        #violet{
+         background-color: violet;
+        }
+        #yellow{
+         background-color: yellow;
+        }
+        #black{
+            background-color: black;
+        }
+        #bac{
+            text-align: right;
+        }
+     </style>
+</head>
+<body>
+    <div id="bac">
+       <span class="btn" id="white"  onclick="changeBG('white')"></span>
+       <span class="btn" id="green" onclick="changeBG('greenyellow')"></span>
+       <span class="btn" id="violet" onclick="changeBG('violet')"></span>
+       <span class="btn" id="yellow" onclick="changeBG('yellow')"></span> 
+       <span class="btn" id="black" onclick="changeBG('black')"></span> 
+    </div>
+    <h1 class="itm">Welcome</h1>
+    <img src="https://thumbs.dreamstime.com/b/holiday-welcome-sign-hanging-rustic-teal-blue-wood-background-white-christmas-garland-border-61613569.jpg">
+    <p class="itm">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Nulla, a unde quia ex corrupti fugit. Eum recusandae sapiente iusto? Qui id quam assumenda quae eligendi inventore explicabo voluptatibus quasi.Lorem ipsum dolor sit, amet consectetur adipisicing elit. Nulla, a unde quia ex corrupti fugit. Eum recusandae sapiente iusto? Qui id quam assumenda quae eligendi inventore explicabo voluptatibus quasi.Lorem ipsum dolor sit, amet consectetur adipisicing elit. Nulla, a unde quia ex corrupti fugit. Eum recusandae sapiente iusto? Qui id quam assumenda quae eligendi inventore explicabo voluptatibus quasi.Lorem ipsum dolor sit, amet consectetur adipisicing elit. Nulla, a unde quia ex corrupti fugit. Eum recusandae sapiente iusto? Qui id quam assumenda quae eligendi inventore explicabo voluptatibus quasi.Lorem ipsum dolor sit, amet consectetur adipisicing elit. Nulla, a unde quia ex corrupti fugit. Eum recusandae sapiente iusto? Qui id quam assumenda quae eligendi inventore explicabo voluptatibus quasi.Lorem ipsum dolor sit, amet consectetur adipisicing elit. Nulla, a unde quia ex corrupti fugit. Eum recusandae sapiente iusto? Qui id quam assumenda quae eligendi inventore explicabo voluptatibus quasi.Lorem ipsum dolor sit, amet consectetur adipisicing elit. Nulla, a unde quia ex corrupti fugit. Eum recusandae sapiente iusto? Qui id quam assumenda quae eligendi inventore explicabo voluptatibus quasi.Lorem ipsum dolor sit, amet consectetur adipisicing elit. Nulla, a unde quia ex corrupti fugit. Eum recusandae sapiente iusto? Qui id quam assumenda quae eligendi inventore explicabo voluptatibus quasi.Lorem ipsum dolor sit, amet consectetur adipisicing elit. Nulla, a unde quia ex corrupti fugit. Eum recusandae sapiente iusto? Qui id quam assumenda quae eligendi inventore explicabo voluptatibus quasi.Lorem ipsum dolor sit, amet consectetur adipisicing elit. Nulla, a unde quia ex corrupti fugit. Eum recusandae sapiente iusto? Qui id quam assumenda quae eligendi inventore explicabo voluptatibus quasi.Lorem ipsum dolor sit, amet consectetur adipisicing elit. Nulla, a unde quia ex corrupti fugit. Eum recusandae sapiente iusto? Qui id quam assumenda quae eligendi inventore explicabo voluptatibus quasi.</p>
+     <script>
+       function changeBG(color){
+        document.body.style.backgroundColor=color;
+        let txt=document.getElementsByClassName("itm");
+    
+        if(color=='black'){
+            for(let elm of txt){
+                elm.style.color='white';
+            }
+        }
+        //Added a if condition because when background color will be black then we need to make text in heading and paragraph as white
+        else{
+            for(let elm of txt){
+                elm.style.color='black';
+            }
+        }
+        //Added a else condition because if text got white due to if condition then it remains white. So by adding this else condition if there is any background other than black then text will be black. 
+       } 
+     </script>
+</body>
+</html>

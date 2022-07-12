@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sticky Menu</title>
+    <style>
+        body{
+            margin: 0px;
+        }
+        #header{
+            text-align: center;
+        } 
+        #logo{
+            width: 300px;
+            height: auto;
+        }
+        #menu{
+             text-align: center;
+             background-color: greenyellow;
+
+             /* We will make position: fixed when we scrolled till that upper image using javascript where 229.865 is the height of upper elemnt */
+  top: 0;
+  width: 100%;
+   
+  /* if we will do 
+
+  position:sticky;
+  top: 0;
+
+  irrespective of
+
+  position: fixed;
+  top: 0;
+  width: 100%;
+
+  then there will be no need to use javascript */
+
+        }
+        #menu li{
+            display: inline-block;
+            padding:15px 10px;
+            color: black;
+            font-size: 20px;
+            font-weight: bold;
+            
+        }
+        #container{
+            text-align: center;
+            padding: 50px 75px;
+        }
+        #im{
+            width: 100%;
+        }
+
+    </style>
+</head>
+<body>
+    <div id="header">
+        <img src="data:image/png;base64,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" id="logo">
+    </div>
+    <nav id="menu">
+     <li>Home</li>
+     <li>About Us</li>
+     <li>Our Team</li>
+     <li>Client</li>
+     <li>Contact Us</li>
+    </nav>
+    <div id="container">
+        <h1>About Us</h1>
+        <img id="im" src="https://thumbs.dreamstime.com/b/holiday-welcome-sign-hanging-rustic-teal-blue-wood-background-white-christmas-garland-border-61613569.jpg">
+        <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Aperiam debitis neque quasi, libero quia sit cum inventore aliquam distinctio labore nobis quod molestias voluptatem iste voluptatibus! Libero incidunt maxime ipsam!Lorem ipsum dolor sit, amet consectetur adipisicing elit. Aperiam debitis neque quasi, libero quia sit cum inventore aliquam distinctio labore nobis quod molestias voluptatem iste voluptatibus! Libero incidunt maxime ipsam!Lorem ipsum dolor sit, amet consectetur adipisicing elit. Aperiam debitis neque quasi, libero quia sit cum inventore aliquam distinctio labore nobis quod molestias voluptatem iste voluptatibus! Libero incidunt maxime ipsam!Lorem ipsum dolor sit, amet consectetur adipisicing elit. Aperiam debitis neque quasi, libero quia sit cum inventore aliquam distinctio labore nobis quod molestias voluptatem iste voluptatibus! Libero incidunt maxime ipsam!Lorem ipsum dolor sit, amet consectetur adipisicing elit. Aperiam debitis neque quasi, libero quia sit cum inventore aliquam distinctio labore nobis quod molestias voluptatem iste voluptatibus! Libero incidunt maxime ipsam!Lorem ipsum dolor sit, amet consectetur adipisicing elit. Aperiam debitis neque quasi, libero quia sit cum inventore aliquam distinctio labore nobis quod molestias voluptatem iste voluptatibus! Libero incidunt maxime ipsam!Lorem ipsum dolor sit, amet consectetur adipisicing elit. Aperiam debitis neque quasi, libero quia sit cum inventore aliquam distinctio labore nobis quod molestias voluptatem iste voluptatibus! Libero incidunt maxime ipsam!Lorem ipsum dolor sit, amet consectetur adipisicing elit. Aperiam debitis neque quasi, libero quia sit cum inventore aliquam distinctio labore nobis quod molestias voluptatem iste voluptatibus! Libero incidunt maxime ipsam!Lorem ipsum dolor sit, amet consectetur adipisicing elit. Aperiam debitis neque quasi, libero quia sit cum inventore aliquam distinctio labore nobis quod molestias voluptatem iste voluptatibus! Libero incidunt maxime ipsam!Lorem ipsum dolor sit, amet consectetur adipisicing elit. Aperiam debitis neque quasi, libero quia sit cum inventore aliquam distinctio labore nobis quod molestias voluptatem iste voluptatibus! Libero incidunt maxime ipsam!Lorem ipsum dolor sit, amet consectetur adipisicing elit. Aperiam debitis neque quasi, libero quia sit cum inventore aliquam distinctio labore nobis quod molestias voluptatem iste voluptatibus! Libero incidunt maxime ipsam!Lorem ipsum dolor sit, amet consectetur adipisicing elit. Aperiam debitis neque quasi, libero quia sit cum inventore aliquam distinctio labore nobis quod molestias voluptatem iste voluptatibus! Libero incidunt maxime ipsam!</p>
+    </div>
+  <script>
+    window.addEventListener('scroll',function(){
+        let navbar=document.getElementById("menu")
+        if(window.pageYOffset>='229.865'){
+            navbar.style.position='fixed';
+        }
+         else{
+             navbar.style.position='static';
+         }
+    })
+  </script>
+</body>
+</html>
