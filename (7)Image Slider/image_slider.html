@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Image Slider</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+   <div class="slide-container">
+    <div class="slider">
+      <img class="slide" src="img/1.jpg">
+     <div class="container">Caption 1</div>
+    </div>
+
+    <div class="slider">
+        <img class="slide" src="img/2.jpg">
+       <div class="container">Caption 2</div>
+      </div>
+
+      <div class="slider">
+        <img class="slide" src="img/3.jpg">
+       <div class="container">Caption 3</div>
+      </div>
+
+      <div class="slider">
+        <img class="slide" src="img/4.jpg">
+       <div class="container">Caption 4</div>
+      </div>
+
+      <div class="slider">
+        <img class="slide" src="img/5.jpg">
+       <div class="container">Caption 5</div>
+      </div>
+      <span class="arrow prev" onclick="controller(-1)">&#10094</span>
+      <span class="arrow next" onclick="controller(1)">&#10095</span>
+      <!-- Here on clicking to previous we passed -1 in controller function so that we can reduce flag value by 1 and go to previous Image
+      And on clicking to next we passed 1 in controller function so that we can increase flag value by 1 and go to next image -->
+    </div> 
+
+   <script src="script.js"></script>
+</body>
+</html>

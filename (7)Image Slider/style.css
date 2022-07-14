@@ -1,0 +1,43 @@
+body{
+    margin: 0;
+}
+
+.slide-container{
+    position: relative;
+    width: 100%;
+}
+.slider{
+   width: 100%;
+   display: none;
+}
+.slide{
+    width: 100%;
+}
+.arrow{
+    cursor: pointer;
+    position: absolute;
+    top: 45%;
+    color: black;
+    background-color: white;
+    padding: 8px 18px;
+    border-radius: 50%;
+    font-size: 25px;
+    font-weight: bold;
+}
+.prev{
+    left: 10px;
+}
+.next{
+    right: 10px;
+}
+.container{
+    color: white;
+    font-size: 30px;
+    font-weight: bold;
+    position: absolute;
+    bottom: 0px;
+    width: 100%;
+    text-align: center;
+    background-color: rgba(0,0,0,0.5);
+    padding: 10px 0px;
+}
