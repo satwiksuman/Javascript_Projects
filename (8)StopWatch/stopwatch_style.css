@@ -1,0 +1,39 @@
+body{
+    background-color: grey;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+#container{
+    color: aliceblue;
+}
+.digit{
+    font-size: 150px;
+    font-weight: bold;
+}
+.txt{
+    font-size: 40px;
+    font-weight: bold;
+}
+#btn-container{
+    text-align: center;
+    margin-top: 10px;
+}
+.btn{
+    padding: 7px 25px;
+    font-size: 15px;
+    margin: 0px;
+    color: white;
+    margin: 0px;
+    cursor: pointer;
+}
+#start{
+background-color: red;
+}
+#stop{
+background-color: blueviolet;
+}
+#reset{
+ background-color: gold;
+}
